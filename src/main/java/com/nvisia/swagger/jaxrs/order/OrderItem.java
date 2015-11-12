@@ -14,6 +14,8 @@ public class OrderItem {
 
    private int orderItemId;
    private int orderedProductId;
+   private double itemPrice;
+   private boolean isInStock;
 
    /**
     * Blank constructor
@@ -27,41 +29,48 @@ public class OrderItem {
     * 
     * @param orderItemId
     * @param orderedProductId
+    * @param itemPrice
+    * @param isInStock
     */
-   public OrderItem(int orderItemId, int orderedProductId) {
+   public OrderItem(int orderItemId, int orderedProductId, double itemPrice,
+         boolean isInStock) {
       super();
       this.orderItemId = orderItemId;
       this.orderedProductId = orderedProductId;
+      this.itemPrice = itemPrice;
+      this.isInStock = isInStock;
    }
 
-   /**
-    * @return the orderItemId
-    */
    public int getOrderItemId() {
       return orderItemId;
    }
 
-   /**
-    * @param orderItemId
-    *           the orderItemId to set
-    */
    public void setOrderItemId(int orderItemId) {
       this.orderItemId = orderItemId;
    }
 
-   /**
-    * @return the orderedProductId
-    */
    public int getOrderedProductId() {
       return orderedProductId;
    }
 
-   /**
-    * @param orderedProductId
-    *           the orderedProductId to set
-    */
    public void setOrderedProductId(int orderedProductId) {
       this.orderedProductId = orderedProductId;
+   }
+
+   public double getItemPrice() {
+      return itemPrice;
+   }
+
+   public void setItemPrice(double itemPrice) {
+      this.itemPrice = itemPrice;
+   }
+
+   public boolean isInStock() {
+      return isInStock;
+   }
+
+   public void setInStock(boolean isInStock) {
+      this.isInStock = isInStock;
    }
 
    /*
@@ -73,7 +82,8 @@ public class OrderItem {
    public String toString() {
       StringBuilder builder = new StringBuilder();
       builder.append("OrderItem [orderItemId=").append(orderItemId)
-            .append(", orderedProductId=").append(orderedProductId).append("]");
+            .append(", orderedProductId=").append(orderedProductId).append(", itemPrice=")
+            .append(itemPrice).append(", isInStock=").append(isInStock).append("]");
       return builder.toString();
    }
 

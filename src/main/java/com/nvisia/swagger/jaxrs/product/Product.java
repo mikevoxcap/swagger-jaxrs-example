@@ -24,6 +24,20 @@ public class Product {
    }
 
    /**
+    * Full constructor
+    * 
+    * @param productId
+    * @param productName
+    * @param sku
+    */
+   public Product(int productId, String productName, String sku) {
+      super();
+      this.productId = productId;
+      this.productName = productName;
+      this.sku = sku;
+   }
+
+   /**
     * @return the productId
     */
    public int getProductId() {
